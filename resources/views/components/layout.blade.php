@@ -19,10 +19,10 @@
                 </a>
             </div>
             <div class="space-x-6 font-bold">
-                <a href="http://">Jobs</a>
-                <a href="http://">Careers</a>
-                <a href="http://">Salaries</a>
-                <a href="http://">Companies</a>
+                <a href="/">Jobs</a>
+                <a href="#">Careers</a>
+                <a href="#">Salaries</a>
+                <a href="#">Companies</a>
             </div>
 
             @auth
