@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Hanken+Grotesk:ital,wght@400;500;600&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-blue-600 text-white font-hanken-grotesk pb-10">
+<body class="bg-black text-white font-hanken-grotesk pb-10">
     <div class="px-10">
         <nav class="flex justify-between items-center py-4 border-b border-white/20">
             <div>
@@ -28,7 +28,6 @@
             @auth
                 <div>
                     <a href="/jobs/create">Post a Job</a>
-                    <a href="/logout">Logout</a>
                 </div>
             @endauth
 
