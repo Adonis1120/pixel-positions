@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Hanken+Grotesk:ital,wght@400;500;600&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-blue-600 text-white font-hanken-grotesk">
+<body class="bg-blue-600 text-white font-hanken-grotesk pb-10">
     <div class="px-10">
         <nav class="flex justify-between items-center py-4 border-b border-white/20">
             <div>
@@ -24,9 +24,20 @@
                 <a href="http://">Salaries</a>
                 <a href="http://">Companies</a>
             </div>
-            <div>
-                <a href="http://">Post a Job</a>
-            </div>
+
+            @auth
+                <div>
+                    <a href="/jobs/create">Post a Job</a>
+                    <a href="/logout">Logout</a>
+                </div>
+            @endauth
+
+            @guest
+                <div class="space-x-6 font-bold">
+                    <a href="/register">Register</a>
+                    <a href="/login">Login</a>
+                </div>
+            @endguest
         </nav>
         <main class="mt-10 max-w-[986px] mx-auto">
             {{ $slot }}
