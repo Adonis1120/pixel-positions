@@ -9,6 +9,9 @@ use App\Http\Controllers\TagController;
 
 Route::get('/', [JobController::class, 'index']);
 
+Route::get('/jobs/create', [JobController::class, 'create'])->middleware('auth');
+Route::post('/jobs', [JobController::class, 'store'])->middleware('auth');
+
 Route::get('/search', SearchController::class);
 Route::get('/tag/{tag:name}', TagController::class);   // without name on {tag:name}, it will automatically assigned to id.
 
